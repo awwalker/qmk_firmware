@@ -381,8 +381,8 @@ void oled_task_user(void) {
     // NOTE: on elite-cs this has to be swapped manually.
     // Each half thinks it `is_keyboard_master()`.
     if (is_keyboard_master()) {
-        render_status_main();  // Renders the current keyboard state (layer, lock, caps, scroll, etc).
-    } else {
         render_secondary();
+    } else {
+        render_status_main();  // Renders the current keyboard state (layer, lock, caps, scroll, etc).
     }
 }
